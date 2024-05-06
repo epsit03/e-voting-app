@@ -60,6 +60,13 @@ class Choose extends Component {
             )
         }) 
         return(
+            <div><header className="header">
+            <h1>ELECTIFYHUB</h1>
+          </header>
+          
+          <div className="cta-buttons">
+            <Link to="/" className="cta-button">Log Out</Link>
+          </div>
             <div className="container">
                 <ul className="collection">
                     <li className="collection-item avatar">
@@ -67,6 +74,7 @@ class Choose extends Component {
                     </li>
                         {electionList}
                 </ul>
+            </div>
             </div>
         )
     }

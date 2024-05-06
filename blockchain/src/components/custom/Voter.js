@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typography } from 'antd';
-import './landingPage.css'; // Import the CSS file for styling
+import './Voter.css'; // Import the CSS file for styling
 const { Title, Paragraph } = Typography;
 
 
 
-const landingPage = () => {
+const Voter = () => {
   return (
-    <div className="home-container">
-      <header className="header">
+    <div>
+    <header className="header">
         <h1>ELECTIFYHUB</h1>
       </header>
       
       <div className="cta-buttons">
-        <Link to="/login" className="cta-button">Log In</Link>
-        <Link to="/register" className="cta-button">Register</Link>
+        <Link to="/choose" className="cta-button">Elecions</Link>
+        <Link to="/" className="cta-button">Log Out</Link>
       </div>
+    <div className="container">
+      
       <div className="background-image"></div>
       <div className="welcome-line">
         <p>Welcome to ELECTIFYHUB</p>
@@ -53,7 +55,8 @@ const landingPage = () => {
         <p>&copy; 2024 ELECTIFYHUB. All rights reserved.</p>
       </footer>
     </div>
+    </div>
   );
 };
 
-export default landingPage;
+export default Voter;

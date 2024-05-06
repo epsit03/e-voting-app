@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import Election from '../../build/Election.json'
+import {Link} from 'react-router-dom';
 
 
 class NewCandidate extends Component{
@@ -81,6 +82,8 @@ class NewCandidate extends Component{
 
     render(){
         return(
+            <div>
+                
             <div className="container">
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" id="candidate_name" name="candidate_name" onChange={this.handleInputChange} required/>
@@ -91,7 +94,8 @@ class NewCandidate extends Component{
                         <i className="material-icons right">send</i>
                     </button>
                 </form>
-            </div>            
+            </div>    
+            </div>        
         )
     }
 }

@@ -102,6 +102,17 @@ class Vote extends Component {
             )
         }) 
         return(
+            <div>
+                <header className="header">
+        <h1>ELECTIFYHUB</h1>
+      </header>
+      
+      <div className="cta-buttons">
+        <Link to="/choose" className="cta-button">Elecions</Link>
+        <Link to="/newElection" className="cta-button">New Election</Link>
+        <Link to="/elections" className="cta-button">Manage Elections</Link>
+        <Link to="/" className="cta-button">Log Out</Link>
+            </div>
             <div className="container">
                 <ul className="collection">
                     <li className="collection-item avatar">
@@ -109,6 +120,7 @@ class Vote extends Component {
                     </li>
                         {electionList}
                 </ul>
+            </div>
             </div>
         )
     }

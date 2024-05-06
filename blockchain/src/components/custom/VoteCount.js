@@ -91,6 +91,7 @@ class VoteCount extends Component {
     render(){
         const electionList = this.state.candidates.map(candidates => {
             return (
+                <div>
                 <div className="contact" key={candidates.id}>
                     <li className="collection-item avatar">
                         <i className="material-icons circle blue darken-2">ballot</i>
@@ -99,9 +100,23 @@ class VoteCount extends Component {
                         <p className="secondary-content"><b>{candidates.voteCount}</b></p>
                     </li>
                 </div>
+                </div>
             )
         }) 
         return(
+            <div>
+                            <header className="header">
+        <h1>ELECTIFYHUB</h1>
+      </header>
+      
+      <div className="cta-buttons">
+        <Link to="/choose" className="cta-button">Elections</Link>
+        <Link to="/newElection" className="cta-button">New Election</Link>
+        <Link to="/elections" className="cta-button">Manage Elections</Link>
+        <Link to="/" className="cta-button">Log Out</Link>
+      </div>
+                
+          
             <div className="container">
                 <ul className="collection">
                     <li className="collection-item avatar">
@@ -109,6 +124,7 @@ class VoteCount extends Component {
                     </li>
                         {electionList}
                 </ul>
+            </div>
             </div>
         )
     }

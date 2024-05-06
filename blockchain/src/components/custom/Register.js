@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Register.css";
 import axios from "axios";
 import {useHistory}  from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Register = () => {
   const history = useHistory();
@@ -50,7 +51,18 @@ const Register = () => {
   };
 
   return (
+    <div>
+    <header className="header">
+        <h1>ELECTIFYHUB</h1>
+      </header>
+      <div className="cta-buttons">
+      <div className="headerText"> Already a user? </div>
+        <Link to="/login" className="cta-button">Login</Link>
+      </div>
+    <div className="container">
+    
     <div classusername="register">
+    
       <h1>Register</h1>
       
       <input type="text" name="username" value={user.username} placeholder="Your username" onChange={handleChange} required />
@@ -75,9 +87,11 @@ const Register = () => {
         Register
       </div>
       <div>or</div>
-      <div classname="button" onClick={() => history("/login")}>
+      <Link to="/login" classname="button">
         Login
-      </div>
+      </Link>
+    </div>
+    </div>
     </div>
   );
 };

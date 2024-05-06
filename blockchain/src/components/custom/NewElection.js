@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class NewElection extends Component {
 
@@ -37,6 +38,17 @@ class NewElection extends Component {
 
     render(){
         return(
+            <div>
+                <header className="header">
+        <h1>ELECTIFYHUB</h1>
+      </header>
+      
+      <div className="cta-buttons">
+        <Link to="/choose" className="cta-button">Elecions</Link>
+        <Link to="/newElection" className="cta-button">New Election</Link>
+        <Link to="/elections" className="cta-button">Manage Elections</Link>
+        <Link to="/" className="cta-button">Log Out</Link>
+            </div>
             <div className="container">
                 <h4>Create New Election</h4>
                     <form onSubmit={this.handleSubmit}>
@@ -50,6 +62,7 @@ class NewElection extends Component {
                             <i className="material-icons right">send</i>
                         </button>
                     </form>
+            </div>
             </div>
         )
     }

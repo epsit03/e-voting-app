@@ -11,6 +11,7 @@ import Choose from './components/custom/Choose';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NewCandidate from './components/custom/NewCandidate';
 import Login from './components/custom/Login';
+import Voter from './components/custom/Voter';
 
 class App extends Component {
 
@@ -33,6 +34,7 @@ class App extends Component {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/voteCount/:id" component={VoteCount}/>
+                <Route exact path="/voter" component={Voter}/>
             </div>
         </BrowserRouter>
         );
